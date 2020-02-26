@@ -1,5 +1,11 @@
 {
   "version": "2.0",
+	"httpWorker": {
+		"description": {
+			"defaultExecutablePath": "node",
+			"defaultWorkerPath": "server.js"
+		}
+	},
   "extensionBundle": {
     "id": "Microsoft.Azure.Functions.ExtensionBundle",
     "version": "[1.*, 2.0.0)"
