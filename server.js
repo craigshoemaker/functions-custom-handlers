@@ -9,11 +9,11 @@ if (process.env.NODE_ENV !== 'production') {
 
 const PORT = process.env.FUNCTIONS_WORKER_PORT;
 
-app.post("/echo", (req, res) => {
+app.post("/api/echo", (req, res) => {
   res.json({ value: req.body });
 });
 
-app.post('/order', (req, res, next) => {
+app.post('/api/order', (req, res, next) => {
   res.json({ value: req.body });
 });
 

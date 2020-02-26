@@ -1,6 +1,6 @@
 
 # Echo
-POST http://127.0.0.1:7071/echo HTTP/1.1
+POST http://127.0.0.1:7071/api/echo HTTP/1.1
 content-type: application/json
 
 {
@@ -10,7 +10,7 @@ content-type: application/json
 ###
 
 # Order
-POST http://127.0.0.1:7071/order HTTP/1.1
+POST http://127.0.0.1:7071/api/order HTTP/1.1
 content-type: application/json
 
 {
