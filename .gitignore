@@ -1,0 +1,16 @@
+# Logs
+logs
+*.log
+
+# dotenv environment variables file
+.env
+.env.test
+
+# Azure Functions artifacts
+bin
+obj
+appsettings.json
+local.settings.json
+
+# node
+node_modules

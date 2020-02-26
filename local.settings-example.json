@@ -1,0 +1,8 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "FUNCTIONS_WORKER_PORT": 7071,
+    "STORAGE_CONNECTION_STRING": "YOUR_QUEUE_STORAGE_CONNECTION_STRING"
+  }
+}
