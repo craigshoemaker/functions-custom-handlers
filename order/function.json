@@ -3,13 +3,13 @@
     {
       "type": "httpTrigger",
       "direction": "in",
-      "authLevel": "function",
-      "name": "input"
+      "name": "req",
+      "methods": ["get", "post"]
     },
     {
       "type": "http",
       "direction": "out",
-      "name": "$return"
+      "name": "res"
     },
     {
       "type": "queue",
