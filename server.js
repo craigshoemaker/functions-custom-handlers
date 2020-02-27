@@ -3,10 +3,6 @@ const app = express();
 
 app.use(express.json());
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config(); // Load env variables from .env file during dev
-}
-
 const PORT = process.env.FUNCTIONS_WORKER_PORT;
 
 app.post("/api/echo", (req, res) => {
