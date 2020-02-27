@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
+
 app.use(express.json());
 
 if (process.env.NODE_ENV !== 'production') {
-  // Load environment variables from .env file during development
-  require('dotenv').config();
+  require('dotenv').config(); // Load env variables from .env file during dev
 }
 
 const PORT = process.env.FUNCTIONS_WORKER_PORT;
@@ -19,8 +19,6 @@ app.post('/api/order', (req, res, next) => {
 
 const server = app.listen(PORT, 'localhost', () => {
    console.log(`Your port is ${PORT}`);
-   const addressInfo = server.address();
-   const host = addressInfo.address;
-   const port = addressInfo.port;
+   const { address:host, port } = server.address();
    console.log(`Example app listening at http://${host}:${port}`);
 });
