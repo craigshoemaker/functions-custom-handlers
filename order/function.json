@@ -1,6 +1,7 @@
 {
   "bindings": [
     {
+      "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
@@ -12,11 +13,11 @@
       "name": "res"
     },
     {
+      "name": "message",
       "type": "queue",
       "direction": "out",
-      "name": "message",
       "queueName": "orders",
-      "connection": "STORAGE_CONNECTION_STRING"
+      "connection": "AzureWebJobsStorage"
     }
   ]
 }
