@@ -16,7 +16,7 @@
       "name": "message",
       "type": "queue",
       "direction": "out",
-      "queueName": "worker",
+      "queueName": "orders",
       "connection": "AzureWebJobsStorage"
     }
   ]
