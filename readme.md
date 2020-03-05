@@ -13,3 +13,5 @@ The *local.settings-example.json* is provided to show what values the app is exp
 The easiest way to experiment with this app is to use [Visual Studio Code](https://code.visualstudio.com) with the [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension.
 
 Launch a debug session and then open the *routes.http* file. Click on a **Send Request** link to issue requests to the development server with the associated payloads.
+
+> Note: This demo is a work-in-progress for some upcoming features in Azure Functions. The repo is public to foster collaboration, but is not meant for use in any environment at the moment.
