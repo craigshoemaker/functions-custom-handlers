@@ -3,8 +3,7 @@
 	"httpWorker": {
 		"description": {
 			"defaultExecutablePath": "node",
-			"defaultWorkerPath": "server.js",
-			"arguments": [ "--inspect" ]
+			"defaultWorkerPath": "server.js"
 		}
 	},
 	"extensionBundle": {

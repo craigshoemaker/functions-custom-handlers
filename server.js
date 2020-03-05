@@ -10,14 +10,41 @@ app.post("/api/echo", (req, res) => {
 });
 
 app.post("/api/order", (req, res) => {
-  const message = { ...req.body };
-  const response = {
-    Outputs: {
-      message: message
-    },
-    ReturnValue: "Order complete"
-  };
-  res.json(response);
+
+   var outputBindings = {};
+   outputBindings["message"] = "hello queue out1";
+   var invocationLogs = [
+     "invocation log1",
+     "invocation log2",
+     "invocation log3"
+   ];
+   var invocationResponse = {
+     Outputs: outputBindings,
+     Logs: invocationLogs,
+     res: "Thanks for the help!",
+     ReturnValue: "hello queue out"
+   };
+
+   console.log(JSON.stringify(invocationResponse));
+
+   res.json(invocationResponse);
+
+  // const message = { ...req.body };
+  // const response = {
+  //   Outputs: {
+  //     message: message,
+  //     res: {
+  //       statusCode: 200,
+  //       body: "Order complete"
+  //     }
+  //   }
+  // };
+
+  // // this is http worker's response to the 
+  // // host about the function invocation
+  // // the body is taken by the host and that 
+  // // becomes the3 results of the fuction invoation
+  // res.json(response);
 });
 
 const server = app.listen(PORT, 'localhost', () => {
