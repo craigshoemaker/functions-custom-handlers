@@ -5,8 +5,18 @@ app.use(express.json());
 
 const PORT = process.env.FUNCTIONS_HTTPWORKER_PORT;
 
-app.post("/echo", (req, res) => {
+const server = app.listen(PORT, "localhost", () => {
+  console.log(`Your port is ${PORT}`);
+  const { address: host, port } = server.address();
+  console.log(`Example app listening at http://${host}:${port}`);
+});
+
+app.post("/hello", (req, res) => {
   res.json({ value: req.body });
+});
+
+app.get("/hello", (req, res) => {
+  res.json("Hello world!");
 });
 
 app.post("/order", (req, res) => {
@@ -21,15 +31,5 @@ app.post("/order", (req, res) => {
     }
   };
 
-  // This is HTTP worker's response to the function
-  // host about the function invocation.
-  // The body is taken by the host and that
-  // becomes the results of the function invocation
   res.json(response);
-});
-
-const server = app.listen(PORT, "localhost", () => {
-  console.log(`Your port is ${PORT}`);
-  const { address: host, port } = server.address();
-  console.log(`Example app listening at http://${host}:${port}`);
 });

@@ -1,6 +1,11 @@
 
-# Echo
-POST http://127.0.0.1:7071/api/echo HTTP/1.1
+# HTTP GET
+GET http://127.0.0.1:7071/api/hello HTTP/1.1
+
+###
+
+# HTTP POST
+POST http://127.0.0.1:7071/api/hello HTTP/1.1
 content-type: application/json
 
 {
